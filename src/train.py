@@ -64,7 +64,7 @@ def train_model(
 
     # Save model
     os.makedirs("models", exist_ok=True)
-    torch.save(mode, "models/emotion_model.pth")
+    torch.save(model, "models/emotion_model.pth")
     print("Model saved to models/emotion_model.pth")
     
     
