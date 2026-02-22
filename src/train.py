@@ -17,8 +17,13 @@ def train_model(
     num_epochs=10,
     batch_size=32,
     lr=1e-4,
-    device="cuda" if torch.cuda.is_available() else "cpu"
+    
+    
 ):
+    # Device Setup
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    print("Using device:", device)
+    
     # Transforms
     transform = transforms.Compose([
         transforms.Resize((224, 224)),
