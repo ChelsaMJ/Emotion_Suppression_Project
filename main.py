@@ -18,7 +18,7 @@ dataset = CASME2Dataset(
 ])
 )
 
-print(f"✅ Loaded {len(dataset)} samples")
+print(f"----Loaded {len(dataset)} samples")
 img, label = dataset[0]
 print("Sample image shape:", img.shape)
 print("Sample label:", label)
