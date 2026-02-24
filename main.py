@@ -10,12 +10,3 @@ train_model(
     num_epochs=40
 )
 
-
-# -------- CROSS VALIDATION ----------
-# cross_validate(
-#     image_root=image_root,
-#     label_excel=label_excel,
-#     num_classes=7,
-#     k=5,
-#     epochs=5
-# )
