@@ -1,15 +1,19 @@
 import numpy as np
-from extract_au_openface import extract_au
-from process_au_features import build_au_sequence
 
+AU_COLUMNS = [
+    'AU01_r','AU02_r','AU04_r','AU05_r','AU06_r',
+    'AU07_r','AU09_r','AU10_r','AU12_r','AU14_r',
+    'AU15_r','AU17_r','AU20_r','AU23_r','AU25_r',
+    'AU26_r','AU45_r'
+]
 
-def extract_full_features(video_path):
+def build_sequence(df):
 
-    df = extract_au(video_path)
+    available = [c for c in AU_COLUMNS if c in df.columns]
 
-    au_seq = build_au_sequence(df)
+    seq = df[available].values
 
-    # Normalize
-    au_seq = au_seq / 5.0
+    # normalize 0–5 → 0–1
+    seq = seq / 5.0
 
-    return au_seq
+    return seq
