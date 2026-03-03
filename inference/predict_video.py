@@ -138,6 +138,8 @@ def predict_video(video_path):
 
     if has_audio:
         speech_segments, latency_events = detect_speech_events(audio_path)
+        print("Speech Segments:", speech_segments)
+        print("Latency Events:", latency_events)
     else:
         speech_segments = []
         latency_events = []
@@ -188,6 +190,7 @@ if __name__ == "__main__":
 
     # test_video = r"G:\capstone data\CASME II\CASME2_Compressed video\CASME2_compressed\sub01\EP02_01f.avi"
     test_video = r"G:\NEW Emotion_Suppression_Project-main\Emotion_Suppression_Project-main\sample test\sample_ravdess.mp4"
+
 
     raw_score, norm_score, level, \
     emotion, suppressed_emotion, \

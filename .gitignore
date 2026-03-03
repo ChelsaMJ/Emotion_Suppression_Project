@@ -1,26 +1,73 @@
-# Ignore dataset files
-data/
-*.xlsx
-*.csv
-*.mp4
-*.avi
-*.m4a
-*.aac
-
-# Ignore model weights if needed
-models/
-
-# PyTorch cache & Python clutter
+# ===============================
+# Python
+# ===============================
 __pycache__/
 *.pyc
-.ipynb_checkpoints/
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+dist/
+build/
 
-# VS Code
-.vscode/
+# ===============================
+# Virtual Environment
+# ===============================
+.venv/
+venv/
+env/
 
-# Jupyter
-*.ipynb_checkpoints/
-
-# OS-specific
+# ===============================
+# OS Files
+# ===============================
 .DS_Store
 Thumbs.db
+desktop.ini
+
+# ===============================
+# IDE / Editor
+# ===============================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ===============================
+# Temporary Project Outputs
+# ===============================
+data/temp_csv/
+data/temp_audio.wav
+data/*.wav
+data/*.mp4
+data/*.avi
+data/*.png
+data/*.jpg
+
+# ===============================
+# Large Model Files (optional)
+# ===============================
+models/*.pth
+models/*.pt
+models/*.h5
+
+# ===============================
+# OpenFace (DO NOT PUSH)
+# ===============================
+OpenFace*/
+*.exe
+*.dll
+
+# ===============================
+# Logs
+# ===============================
+*.log
+
+# ===============================
+# Jupyter
+# ===============================
+.ipynb_checkpoints/
+
+# ===============================
+# System Cache
+# ===============================
+.cache/

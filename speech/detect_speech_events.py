@@ -3,8 +3,8 @@ import numpy as np
 
 
 def detect_speech_events(audio_path,
-                         silence_threshold=0.01,
-                         min_silence_duration=0.5):
+                         silence_threshold=0.005,
+                         min_silence_duration=0.2):
 
     y, sr = librosa.load(audio_path)
 
