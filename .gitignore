@@ -46,8 +46,8 @@ data/*.jpg
 # ===============================
 # Large Model Files (optional)
 # ===============================
-models/*.pth
-models/*.pt
+# models/*.pth  (un-ignored for Render deployment)
+# models/*.pt
 models/*.h5
 
 # ===============================

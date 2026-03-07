@@ -1,7 +1,9 @@
+import os
 import numpy as np
 
-X = np.load("data/processed/X.npy")
-y = np.load("data/processed/y.npy")
+BASE_DIR = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
+X = np.load(os.path.join(BASE_DIR, "data", "processed", "X.npy"))
+y = np.load(os.path.join(BASE_DIR, "data", "processed", "y.npy"))
 
 print("Any NaN in X:", np.isnan(X).any())
 print("Any NaN in y:", np.isnan(y).any())
